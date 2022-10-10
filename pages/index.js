@@ -1,5 +1,11 @@
 import Head from "next/head";
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import Image from "next/image";
+import image1 from "../public/f00000d.jpeg";
+import image2 from "../public/blogSite.png";
+import image3 from "../public/kissTheCook.png";
+import image4 from "../public/JATE.png";
+import image5 from "../public/micah.jpg";
 
 export default function Home() {
   return (
@@ -14,56 +20,178 @@ export default function Home() {
         </style>
       </Head>
 
-      <main>
-        <div className="bg-gradient-to-b from-emerald to-skyBlue">
-          <div>
-            <h2 className="text-3xl text-center">Micah Bottoms</h2>
-          </div>
-          <nav className="py-4 mb-6 flex justify-between">
-            <ul className="flex items-center">
-              <li>
-                <a href="">About Me</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="">Find Me</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
+      <main className="bg-gradient-to-b from-skyBlue to-light">
         <div>
-          <div></div>
-          <div>
-            <div id="projects" className="flex flex-col">
-              <h3>Projects</h3>
-              <div className="basis-1/3 flex-1 bg-yellow-400">hello</div>
-              <div className="basis-1/3 flex-1 bg-yellow-400">hello</div>
-              <div className="basis-1/3 flex-1 bg-yellow-400">hello</div>
-              <div className="box-content bg-yellow-400">hello</div>
+          <div className="py-4">
+            <h2 className="text-3xl text-center mx-2 py-5 bg-light rounded-full lg:mx-96">
+              Micah Bottoms
+            </h2>
+          </div>
+
+          <div className="flex justify-between">
+            <button className="px-12 mx-2 my-24 lg:px-20 lg:mx-8 rounded-full bg-light hover:shadow-xl">
+              Resume
+            </button>
+            <nav className="py-4 mb-8 flex justify-between">
+              <div className="bg-yellow-200 rounded-full py-28 mr-2 md:mr-6 lg:mr-8">
+                <ul className="flex">
+                  <li className="ml-3 hover:shadow-md">
+                    <a href="#bio">About Me</a>
+                  </li>
+                  <li className="mx-4 hover:shadow-md hover:shadow-light">
+                    <a href="#projects">Projects</a>
+                  </li>
+                  <li className="mr-3 hover:shadow-md">
+                    <a href="#contact">Find Me</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        {/* Section with Projects Heading and Projects */}
+        <div>
+          <div id="projects">
+            <h3 className="text-center text-4xl mb-4">Projects</h3>
+            <p className="text-center mb-6">
+              Projects I have worked on with links below
+            </p>
+            {/* Projects container */}
+            <div className="flex flex-col md:flex-row lg:flex-row justify-center text-center">
+              {/* Project 1 */}
+              <div className="bg-light my-2 mx-4 py-2 shadow-md rounded-lg hover:shadow-xl lg:mx-4 lg:hover:shadow-xl">
+                <div className="py-2 px-2">
+                  <a
+                    href="https://chuckfee23.github.io/project1-group5/"
+                    target="_blank"
+                  >
+                    <Image width={"350px"} height={"200px"} src={image1} />
+                  </a>
+                </div>
+
+                <h3 className="text-xl">F00000d</h3>
+                <p className="text-sm">A single page API app</p>
+                <a
+                  className="text-sm text-blue-600"
+                  href="https://github.com/chuckfee23/project1-group5"
+                  target="_blank"
+                >
+                  Github Repository
+                </a>
+              </div>
+
+              {/* Project 2 */}
+              <div className="bg-light my-2 py-2 shadow-sm rounded-lg mx-4 hover:shadow-lg lg:mx-4 lg:hover:shadow-xl">
+                <div className="py-2 px-2">
+                  <a
+                    href="https://enigmatic-meadow-07439.herokuapp.com/"
+                    target="_blank"
+                  >
+                    <Image width={"350px"} height={"200px"} src={image2} />
+                  </a>
+                </div>
+                <h3 className="text-xl">Tech Blog</h3>
+                <p className="text-sm">A fullstack web app</p>
+                <a
+                  className="text-sm text-blue-600"
+                  href="https://github.com/mbottoms3/CMS_Blog_Site"
+                  target="_blank"
+                >
+                  Github Repository
+                </a>
+              </div>
+
+              {/* Project 3 */}
+              <div className="bg-light my-2 py-2 shadow-md rounded-lg mx-4 hover:shadow-sm lg:mx-4 lg:hover:shadow-xl">
+                <div className="py-2 px-2">
+                  <a
+                    href="https://kiss-the-cook.herokuapp.com/"
+                    target="_blank"
+                  >
+                    <Image width={"350px"} height={"200px"} src={image3} />
+                  </a>
+                </div>
+
+                <h3 className="text-xl">Kiss the Cook</h3>
+                <p className="text-sm">A fullstack web app</p>
+                <a
+                  className="text-sm text-blue-600"
+                  href="https://github.com/madrodgerflynn/Kiss_The_Cook"
+                  target="_blank"
+                >
+                  Github Repository
+                </a>
+              </div>
+
+              {/* Project 4 */}
+              <div className="bg-light my-2 py-2 shadow-lg rounded-lg mx-4 hover:shadow-sm lg:mx-4 lg:hover:shadow-xl">
+                <div className="py-2 px-2">
+                  <a href="">
+                    <Image width={"350px"} height={"200px"} src={image4} />
+                  </a>
+                </div>
+
+                <h3 className="text-xl">JATE</h3>
+                <p className="text-sm">A progressive web application</p>
+                <a
+                  className="text-sm text-blue-600"
+                  href="https://github.com/mbottoms3/Text_Editor_App"
+                  target="_blank"
+                >
+                  Github Repository
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className=" text-4xl flex justify-center gap-12 m-2">
+        {/* About me */}
+        <div id="bio" className="text-center mt-16">
+          <h3 className="text-4xl mb-6">About Me</h3>
+          {/* Image Div */}
+          <div className=" md:px-2">
+            <div className="rounded-xl bg-light md:mx-2 lg:px py-4">
+              <Image width={"230px"} height={"320px"} src={image5} />
+            </div>
+          </div>
+          {/* Bio text */}
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            accusamus hic voluptates totam dolorem. Tempore totam ipsa debitis,
+            quod quasi, modi iste rerum voluptatibus laborum nemo quia cumque
+            commodi atque!
+          </p>
+        </div>
+      </main>
+      <div className="pt-20 pb-8 bg-gradient-to-b from-light to-skyBlue">
+        <h3 className="text-4xl text-center mb-10">
+          Find me with the links below!
+        </h3>
+        <div id="contact" className="text-4xl flex justify-center gap-12 m-2">
           <a
+            className="hover:shadow-md hover:shadow-black"
             href="https://www.linkedin.com/in/micah-bottoms-09a096246/"
             target="_blank"
           >
             <AiFillLinkedin />
           </a>
 
-          <a href="https://github.com/mbottoms3" target="_blank">
+          <a
+            className="hover:shadow-md hover:shadow-black"
+            href="https://github.com/mbottoms3"
+            target="_blank"
+          >
             <AiFillGithub />
           </a>
 
-          <a href="mailto: bottoms.micah.3@gmail.com">
+          <a
+            className="hover:shadow-md hover:shadow-black"
+            href="mailto: bottoms.micah.3@gmail.com"
+          >
             <AiOutlineMail />
           </a>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
