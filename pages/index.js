@@ -6,6 +6,7 @@ import image2 from "../public/blogSite.png";
 import image3 from "../public/kissTheCook.png";
 import image4 from "../public/JATE.png";
 import image5 from "../public/micah.jpg";
+// import { Document, Page } from "react-pdf";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
       <main className="bg-gradient-to-b from-skyBlue to-light">
         <div>
           <div className="py-4">
-            <h2 className="text-3xl text-center mx-2 py-5 bg-light rounded-full lg:mx-96">
+            <h2 className="text-5xl text-center mx-2 py-5 bg-light rounded-full lg:mx-96">
               Micah Bottoms
             </h2>
           </div>
@@ -35,13 +36,13 @@ export default function Home() {
             <nav className="py-4 mb-8 flex justify-between">
               <div className="bg-yellow-200 rounded-full py-28 mr-2 md:mr-6 lg:mr-8">
                 <ul className="flex">
-                  <li className="ml-3 hover:shadow-md">
+                  <li className="ml-3 hover:shadow-md hover:shadow-yellow-400">
                     <a href="#bio">About Me</a>
                   </li>
-                  <li className="mx-4 hover:shadow-md hover:shadow-light">
+                  <li className="mx-4 hover:shadow-md hover:shadow-yellow-400">
                     <a href="#projects">Projects</a>
                   </li>
-                  <li className="mr-3 hover:shadow-md">
+                  <li className="mr-3 hover:shadow-md hover:shadow-yellow-400">
                     <a href="#contact">Find Me</a>
                   </li>
                 </ul>
@@ -65,7 +66,12 @@ export default function Home() {
                     href="https://chuckfee23.github.io/project1-group5/"
                     target="_blank"
                   >
-                    <Image width={"350px"} height={"200px"} src={image1} />
+                    <Image
+                      className="rounded-lg"
+                      width={"350px"}
+                      height={"200px"}
+                      src={image1}
+                    />
                   </a>
                 </div>
 
@@ -87,7 +93,12 @@ export default function Home() {
                     href="https://enigmatic-meadow-07439.herokuapp.com/"
                     target="_blank"
                   >
-                    <Image width={"350px"} height={"200px"} src={image2} />
+                    <Image
+                      className="rounded-lg"
+                      width={"350px"}
+                      height={"200px"}
+                      src={image2}
+                    />
                   </a>
                 </div>
                 <h3 className="text-xl">Tech Blog</h3>
@@ -108,7 +119,12 @@ export default function Home() {
                     href="https://kiss-the-cook.herokuapp.com/"
                     target="_blank"
                   >
-                    <Image width={"350px"} height={"200px"} src={image3} />
+                    <Image
+                      className="rounded-lg"
+                      width={"350px"}
+                      height={"200px"}
+                      src={image3}
+                    />
                   </a>
                 </div>
 
@@ -127,7 +143,12 @@ export default function Home() {
               <div className="bg-light my-2 py-2 shadow-lg rounded-lg mx-4 hover:shadow-sm lg:mx-4 lg:hover:shadow-xl">
                 <div className="py-2 px-2">
                   <a href="">
-                    <Image width={"350px"} height={"200px"} src={image4} />
+                    <Image
+                      className="rounded-lg"
+                      width={"350px"}
+                      height={"200px"}
+                      src={image4}
+                    />
                   </a>
                 </div>
 
@@ -146,20 +167,28 @@ export default function Home() {
         </div>
 
         {/* About me */}
-        <div id="bio" className="text-center mt-16">
+        <div id="bio" className="text-center mt-16 mx-2 lg:mx-48">
           <h3 className="text-4xl mb-6">About Me</h3>
           {/* Image Div */}
-          <div className=" md:px-2">
-            <div className="rounded-xl bg-light md:mx-2 lg:px py-4">
-              <Image width={"230px"} height={"320px"} src={image5} />
+          <div className="mx-2 md:px-2">
+            <div className="rounded-xl bg-light md:mx-2 lg:px-40 py-4">
+              <Image
+                className="rounded-md"
+                width={"230px"}
+                height={"320px"}
+                src={image5}
+              />
             </div>
           </div>
           {/* Bio text */}
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            accusamus hic voluptates totam dolorem. Tempore totam ipsa debitis,
-            quod quasi, modi iste rerum voluptatibus laborum nemo quia cumque
-            commodi atque!
+          <p className="mx-2 md:px-2">
+            Hello! My name is Micah Bottoms and I'm a software developer! I
+            learned how to code through the University of Denver and I'm excited
+            to begin my career. I have really enjoyed the problem solving that
+            development brings, as it's an exciting challenge each time. I am
+            based out of the United States, in Shreveport, Louisiana
+            specifically. Some of my favorite languages and technologies
+            include: Javascript, Mongoose, GraphQL and Tailwind CSS.
           </p>
         </div>
       </main>
